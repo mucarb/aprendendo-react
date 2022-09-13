@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const name = 'Murilo';
+
+  const url = 'https://via.placeholder.com/150'
+
+  function sum(a, b) {
+    return a + b
+  }
+
+  /* função que renderiza o HTML */
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    /* no jsx utiliza a palavra 'className' pra referenciar um arquivo de estilo, a palavra 'class' que é usada em marcações HTML, não é utilizada aqui por ser uma palavra reservada do React */
+    <div className="App" >
+      <h2>Alterando JSX!</h2>
+      <p>Olá {name.toUpperCase() /* pode interpolar script no html por meio de chaves { } */}</p>
+      <p>Soma: {sum(2, 1)}</p>
+      <img src={url} alt="Minha imagem" />
     </div>
   );
 }
