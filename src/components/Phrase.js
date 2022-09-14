@@ -1,7 +1,12 @@
+// importanto a folha de estilo para o componente
+import style from './Phrase.module.css';
+
 function Phrase() {
   return (
-    <div>
-      <p>Este é um componente com uma frase!</p>
+    <div className={style.phrase_container}>
+      <p className={style.phrase_content}>
+        Este é um componente com uma frase!
+      </p>
     </div>
   );
 }

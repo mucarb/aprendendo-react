@@ -1,0 +1,11 @@
+/* Criando folha de estilo a nivel de componente */
+.phrase_container {
+  background-color: #333;
+  border: 1px solid #111;
+}
+
+.phrase_content {
+  color: #fff;
+  background-color: #333;
+  margin: 0;
+}

@@ -1,7 +1,7 @@
 import './App.css';
-import HelloWord from './components/HelloWord';
-import SayMyName from './components/SayMyName';
 import People from './components/People';
+import SayMyName from './components/SayMyName';
+import Phrase from './components/Phrase';
 
 function App() {
 
@@ -9,8 +9,9 @@ function App() {
 
   return (
     <div className="App" >
-      <HelloWord />
-      {/* Chamando os componentes com as props definida */}
+      <h1>Testanado CSS</h1>
+      <Phrase/>
+      <Phrase/>
       <SayMyName name="Matheus" />
       <SayMyName name="João" />
       <SayMyName name={name} />
