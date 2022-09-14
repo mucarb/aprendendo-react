@@ -1,4 +1,5 @@
 import './App.css';
+import HelloWord from './components/HelloWord'; /* É nescessario o import do componente para uso */
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <p>Olá {name.toUpperCase() /* pode interpolar script no html por meio de chaves { } */}</p>
       <p>Soma: {sum(2, 1)}</p>
       <img src={url} alt="Minha imagem" />
+      <HelloWord /> {/* Chamando o componente pra ser exibido */}
     </div>
   );
 }
