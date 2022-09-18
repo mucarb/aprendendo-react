@@ -1,15 +1,22 @@
-function Event({ number }) {
+import Button from "./Button";
+
+function Event() {
 
   // declarando função que será chamada no evento do botão
   function myEvent() {
-    console.log(`Evento ativado! ${number}`);
+    console.log(`Ativando o evento passado por props!`);
+  }
+
+  function anotherEvent() {
+    console.log(`Ativando outro evento!`);
   }
 
   return (
     <div>
       <p>Clique para disparar um evento</p>
-      {/* chamando evento de clique em um botão */}
-      <button onClick={myEvent}>Ativar!</button>
+      {/* ativando o evento que é enviado para outro componente através da prop */}
+      <Button event={myEvent} text="Primeiro evento" />
+      <Button event={anotherEvent} text="Outro evento" />
     </div>
   );
 }

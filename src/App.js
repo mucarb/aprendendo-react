@@ -7,7 +7,6 @@ function App() {
     <div className="App" >
       <h1>Testanado Eventos</h1>
       <Event number='1' />
-      <Event number='2' />
       <Form />
     </div>
   );
