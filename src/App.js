@@ -1,15 +1,18 @@
+import { useState } from 'react';
 import './App.css';
-import AnotherList from './components/AnotherList';
+import Salutation from './components/Salutation';
+import YourName from './components/YourName';
 
 function App() {
-
-  const myItems = ['React', 'Angular', 'Vue'];
+  const [name, setName] = useState();
 
   return (
     <div className="App" >
-      <h1>Renderização de Listas</h1>
-      <AnotherList items={myItems} />
-      <AnotherList items={[]} />
+      {/* State Lift permite refletir dados entre varios componentes, apenas elevando o state para o componente pai
+      no exemplo vemos que atribuimos o valor (setName) enquanto o outro faz leitura (name) */}
+      <h1>State Lift</h1>
+      <YourName setName={setName} />
+      <Salutation name={name} />
     </div>
   );
 }
